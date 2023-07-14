@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarElectronic.CarElectronicF08">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Detalle" FontSize="26" HorizontalTextAlignment="Center"/>
+
+            
+            
+
+            <Label Text="Id Orden" FontSize="18" />
+            <Entry x:Name="txtIdOrden" Placeholder="Id ORDEN"></Entry>
+            
+            <!--<Entry x:Name="txtIdDefinicion2" Placeholder=" Identificacion2"></Entry>-->
+            <Label Text="Valdefin1" FontSize="18" />
+            <Picker Title="Definicion1" x:Name="pkValdefin1">
+                <Picker.Items>
+                    <x:String>VHDSPAUGENERAL</x:String>
+                    <x:String>VHUBICACARROCERIA</x:String>
+                    <x:String>VHNDVCARROCERIA</x:String>
+                    <x:String>VHTIPOCOMBUSTIBLE</x:String>
+                    
+                    
+                </Picker.Items>
+            </Picker>
+            <!--<Entry x:Name="txtValdefin1" Placeholder="Valdefin1"></Entry>-->
+            <Label Text="Valdefin2" FontSize="18" />
+            <Picker Title="Definicion2" x:Name="pkValdefin2">
+                <Picker.Items>
+                    <x:String>GETIPOSERVICIO</x:String>
+                    <x:String>VHTRABAJOSERVICIO</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker Title="Servicios" x:Name="pkservicios">
+                <Picker.Items>
+                    <x:String>Plumas</x:String>
+                    <x:String>Radio</x:String>
+                    <x:String>Encendedor</x:String>
+                    <x:String>Espejos</x:String>
+                    <x:String>Moquetas</x:String>
+                    <x:String>Antena</x:String>
+                    <x:String>Llanta de emergencia</x:String>
+                    <x:String>Gata</x:String>
+                    <x:String>Tapacubos</x:String>
+                    <x:String>Herramientas</x:String>
+                    <x:String>Tuerca de seguridad</x:String>
+                    <x:String>Extintor</x:String>
+                </Picker.Items>
+            </Picker>
+            <!--<Entry x:Name="txtValdefin2" Placeholder="Valdefin2"></Entry>-->
+            <Label Text="PathDigitaliza" FontSize="18" />
+            <Entry x:Name="txtPathDigitaliza" Placeholder="Path"></Entry>
+            <Label Text="CodtipoDigitaliza" FontSize="18" />
+            <Entry x:Name="txtCodtipoDigitaliza" Placeholder="Codigo Digitalización"></Entry>
+            
+                                       
+            <Button x:Name="btnIngresar" Text="Ingresar Datos" Clicked="btnIngresar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

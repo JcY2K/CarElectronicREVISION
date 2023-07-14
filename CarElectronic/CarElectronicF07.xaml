@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarElectronic.CarElectronicF07">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Cabecera de Ordenes" FontSize="26" HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Id Cliente" FontSize="18" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Id Vehiculo" FontSize="18" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Codigo Usuario" FontSize="18" Grid.Row="3" Grid.Column="0"/>
+                <!--<Label Text="Estatus" FontSize="18" Grid.Row="3" Grid.Column="0"/>-->
+                <Label Text="Fecha" FontSize="18" Grid.Row="4" Grid.Column="0"/>
+                <Label Text="Hora Inicio" FontSize="18" Grid.Row="5" Grid.Column="0"/>
+                <Label Text="Kilometraje" FontSize="18" Grid.Row="6" Grid.Column="0"/>
+                <Label Text="Porcentaje Comubustible" FontSize="18" Grid.Row="7" Grid.Column="0"/>
+                <Label Text="Codigo Tipo Servicio" FontSize="18" Grid.Row="8" Grid.Column="0"/>
+                <Label Text="Observación" FontSize="18" Grid.Row="9" Grid.Column="0"/>
+                <Label Text="Recomendación" FontSize="18" Grid.Row="10" Grid.Column="0"/>
+                <Label Text="Celular Tercero" FontSize="18" Grid.Row="11" Grid.Column="0"/>
+                <!--<Label Text="Fecha Cierre" FontSize="18" Grid.Row="12" Grid.Column="0"/>-->
+
+                <!--<Entry Grid.Row="1" Grid.Column="1" x:Name="txtIdOrden" Placeholder=" "-->
+                <Picker Grid.Row="1" Grid.Column="1" Title="Cliente" x:Name="pkCliente" >
+                    <Picker.Items>
+                        <x:String>001 Jimena</x:String>
+                        <x:String>002 Santiago</x:String>
+                        <x:String>003 Juan</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker Grid.Row="2" Grid.Column="1" Title="Id Vehiculo" x:Name="pkVehiculo" >
+                    <Picker.Items>
+                        <x:String>001 CHEVR</x:String>
+                        <x:String>002 HYUND</x:String>
+                        <x:String>003 KIA</x:String>
+                    </Picker.Items>
+                </Picker>
+                <!--<Entry Grid.Row="2" Grid.Column="1" x:Name="txtIdVehiculo" Placeholder="Id Vehiculo" IsReadOnly="True"/>-->
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="txtIdUsuario" Placeholder="Identificación"></Entry> <!--IsReadOnly="True"-->
+                    <!--<Entry Grid.Row="3" Grid.Column="1" x:Name="txtEstatus" Placeholder="Estatus"/>-->
+                <DatePicker  Grid.Row="4" Grid.Column="1" x:Name="FecIngreso" Format="dd/MM/yyyy"></DatePicker>
+                <Entry Grid.Row="5" Grid.Column="1" x:Name="txtHora" Placeholder="Ingrese la Hora de ingreso" Keyboard="Numeric"/>
+                <Entry Grid.Row="6" Grid.Column="1" x:Name="txtKilometraje" Placeholder="Ingrese el Km" Keyboard="Numeric"/>
+                <Entry Grid.Row="7" Grid.Column="1" x:Name="txtPorcentajeComb" Placeholder=" " Keyboard="Numeric"/>
+                <!--<Entry Grid.Row="8" Grid.Column="1" x:Name="txtCodTipServicio" Placeholder=" "/>-->
+                <Picker Grid.Row="8" Grid.Column="1" Title="Codigo servicio" x:Name="pkCodTipServicio" >
+                    <Picker.Items>
+                        <x:String>ABCMTR</x:String>
+                        <x:String>ABCFRN</x:String>
+                        <x:String>ALNBLC</x:String>
+                        <x:String>ACTMTR</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry Grid.Row="9" Grid.Column="1" x:Name="txtObservacion" Placeholder="Ingrese observacion"/>
+                <Entry Grid.Row="10" Grid.Column="1" x:Name="txtRecomendacion" Placeholder="Ingerese recomendacion"/>
+                <Entry Grid.Row="11" Grid.Column="1" x:Name="txtCelular" Placeholder="Ingerese el año" Keyboard="Numeric"/>
+                    
+
+            </Grid>
+               
+            <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked"/>
+            <Button x:Name="btnConsultar" Text="Detalle Orden" Clicked="btnConsultar_Clicked"/>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
